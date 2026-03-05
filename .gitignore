@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+playground/node_modules/
+playground/dist/
+/.idea
+package-lock.json

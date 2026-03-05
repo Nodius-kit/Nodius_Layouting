@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nodius Layouting - Playground</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Nodius Layouting Playground</h1>
+      <div class="controls">
+        <label>
+          Example:
+          <select id="example-select"></select>
+        </label>
+        <label>
+          Direction:
+          <select id="direction-select">
+            <option value="TB">Top to Bottom</option>
+            <option value="LR">Left to Right</option>
+            <option value="BT">Bottom to Top</option>
+            <option value="RL">Right to Left</option>
+          </select>
+        </label>
+        <label>
+          Node Spacing:
+          <input type="range" id="node-spacing" min="10" max="100" value="40" />
+          <span id="node-spacing-value">40</span>
+        </label>
+        <label>
+          Layer Spacing:
+          <input type="range" id="layer-spacing" min="20" max="200" value="60" />
+          <span id="layer-spacing-value">60</span>
+        </label>
+        <button id="apply-btn">Apply Layout</button>
+        <span id="timing"></span>
+      </div>
+    </header>
+    <div class="main-content">
+      <div class="panel">
+        <h2>Input JSON</h2>
+        <textarea id="json-editor" spellcheck="false"></textarea>
+      </div>
+      <div class="panel svg-panel">
+        <h2>Before Layout</h2>
+        <div id="svg-before" class="svg-container"></div>
+      </div>
+      <div class="panel svg-panel">
+        <h2>After Layout</h2>
+        <div id="svg-after" class="svg-container"></div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

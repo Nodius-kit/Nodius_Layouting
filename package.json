@@ -1,0 +1,48 @@
+{
+  "name": "@nodius/layouting",
+  "version": "0.1.0",
+  "description": "Zero-dependency, optimized graph layouting algorithm for node-based technical diagrams with incremental layout support",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "graph",
+    "layout",
+    "layouting",
+    "node",
+    "edge",
+    "diagram",
+    "technical",
+    "sugiyama",
+    "dag",
+    "zero-dependency"
+  ],
+  "author": "Hugo MATHIEU",
+  "license": "ISC",
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}
